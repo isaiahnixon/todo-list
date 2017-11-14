@@ -36,7 +36,7 @@ npm start
 
 ## Running the tests
 
-The only test as of now is [App.test](src/App.test.js). Feel free to [help out](CONTRIBUTING.md) in writing them.
+The tests, at this point in time, basically only test that the application renders without crashing. Any [contributions](#contributing) in this area would be much appreciated.
 
 ```
 npm test

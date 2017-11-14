@@ -12,7 +12,7 @@ describe('<TaskList />', () => {
 
     Enzyme.configure({ adapter: new Adapter()});
 
-    it('should render two Task components', () => {
+    it('should render one Task component', () => {
         const wrapper = shallow(<TaskList />);
         expect(wrapper.find(Task)).to.have.length(1);
     });
