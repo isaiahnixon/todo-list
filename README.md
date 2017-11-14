@@ -54,7 +54,7 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details concerning the code o
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/isaiahnixon/todo-list/tags).
 
 ## Authors
 
