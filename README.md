@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-First you will need node.js and npm.
+First you will need [node.js](https://nodejs.org/en/).
 
 ### Installation
 
