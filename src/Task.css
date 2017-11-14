@@ -1,0 +1,10 @@
+.Task {
+    margin: 1em;
+    padding: 1em;
+    border: 0.5em solid;
+    background: grey;
+}
+
+.task_description {
+    text-align: left;
+}

@@ -1,0 +1,14 @@
+.AddTask {
+    margin: 1em;
+    padding: 1em;
+    border: 0.5em solid darkgreen;
+    background: darkgrey;
+}
+
+.task_text_input {
+    width: 100%;
+    height: 1.5em;
+    font-size: 1em;
+    color: white;
+    background: grey;
+}
