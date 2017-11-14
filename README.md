@@ -8,11 +8,13 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-First you will need [node.js](https://nodejs.org/en/).
+* [node.js](https://nodejs.org/en/).
+
+#### Windows
+
+* [Git for Windows](https://git-for-windows.github.io/).
 
 ### Installation
-
-Once you have those, run:
 
 ```
 git clone https://github.com/isaiahnixon/todo-list
@@ -21,6 +23,8 @@ git clone https://github.com/isaiahnixon/todo-list
 ```
 cd todo-list
 ```
+
+(On Windows, you may want to switch to your "Node.js command prompt.")
 
 ```
 npm install
@@ -33,8 +37,6 @@ npm start
 ## Running the tests
 
 The only test as of now is [App.test](src/App.test.js). Feel free to [help out](CONTRIBUTING.md) in writing them.
-
-Run:
 
 ```
 npm test
