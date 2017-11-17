@@ -1,10 +1,11 @@
 .Task {
-    margin: 1em;
-    padding: 1em;
-    border: 0.5em solid;
-    background: grey;
+  margin: 1em;
+  padding: 1em;
+  border: 0.5em solid;
+  border-radius: 4em;
+  background: darkgrey;
 }
 
 .task_description {
-    text-align: left;
+  text-align: left;
 }

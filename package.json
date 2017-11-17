@@ -1,6 +1,6 @@
 {
   "name": "todo-list",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "A todo list web application built using create-react-app.",
   "authors": {
@@ -13,13 +13,23 @@
   },
   "dependencies": {
     "chai": "^4.1.2",
+    "husky": "^0.14.3",
+    "lint-staged": "^5.0.0",
+    "prettier": "^1.8.2",
     "react": "^16.0.0",
     "react-dom": "16.0.0",
     "react-scripts": "1.0.14",
-    "rss-url-parser": "^1.0.0",
-    "sinon": "^4.0.1"
+    "sinon": "^4.0.1",
+    "yarn": "^1.3.2"
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx,json,css}": [
+      "prettier --single-quote --write",
+      "git add"
+    ]
   },
   "scripts": {
+    "precommit": "lint-staged",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
