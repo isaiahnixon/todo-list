@@ -1,3 +1,16 @@
+button {
+    background: darkgreen;
+    margin: 1em;
+    padding: 0.5em;
+    border: 0.33em ridge grey;
+    width: 10em;
+    color: white;
+    font-size: 1em;
+}
+div {
+    white-space: pre-wrap;
+}
+
 .TaskList {
     text-align: center;
 }
@@ -11,17 +24,4 @@
 .task_list_message {
     text-align: left;
     margin: 1em;
-}
-
-button {
-    background: darkgreen;
-    margin: 1em;
-    padding: 0.5em;
-    border: 0.33em ridge grey;
-    width: 10em;
-    color: white;
-    font-size: 1em;
-}
-div {
-    white-space: pre-wrap;
 }

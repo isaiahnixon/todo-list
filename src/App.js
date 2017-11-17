@@ -1,7 +1,12 @@
+/**
+ * This is the master JS file which renders the application.
+ *
+ * Right now, it basically just renders a TaskList.
+ */
+
 import React, { Component } from 'react';
 import './App.css';
 import TaskList from './TaskList';
-import Task from "./Task";
 
 const App = () => {
 
