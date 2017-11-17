@@ -2,11 +2,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Todo List
 
-A todo list web application built using [create-react-app](https://github.com/facebookincubator/create-react-app) for the purpose of learning.
-
 ## Purpose
 
-This is a really simple project with a ton of inline comments and some good [resources](#Resources) to help you get started learning React.js, no matter what your previous level of JS experience.
+This is a really simple project with a ton of inline comments and some good [resources](#resources) to help you get started learning React.js, no matter what your previous level of JS experience.
 
 ## Getting Started
 
@@ -41,7 +39,7 @@ yarn start
 
 Now the application should be running on [http://localhost:3000/](http://localhost:3000/) and the output should look something like this:
 
-![Todo List Output](https://github.com/isaiahnixon/todo-list/blob/master/public/Todo-List.JPG?raw=true)
+![Todo List Output](/blob/master/public/Todo-List.JPG?raw=true)
 
 ### Resources
 
