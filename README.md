@@ -48,11 +48,11 @@ Now the application should be running on [http://localhost:3000/](http://localho
 
 #### Brandon Richey
 
-* [Hello World Tutorial](https://github.com/richeyb/hello-world-tutorial-example) (An extremely complete guide on learning create-react-app)
+* [Hello World Tutorial](https://github.com/richeyb/hello-world-tutorial-example) (Source code for the below tutorials)
 * [Learning React With Create-React-App (Part 1)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc) (An introduction to create-react-app, React Components, and JSX)
 * [Learning React With Create-React-App (Part 2)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-2-3ad99f38b48d) (An introduction to properties, state, and interactivity)
 * [Learning React With Create-React-App (Part 3)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-3-322447d14192) (An introduction to functions and inheritance)
-* [Learning React with Create-React-App (Part 4)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-4-9f843c8c1ccc) (An introduction to testing)
+* [Learning React With Create-React-App (Part 4)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-4-9f843c8c1ccc) (An introduction to testing)
 
 ## Running the tests
 
