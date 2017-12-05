@@ -39,7 +39,7 @@ yarn start
 
 Now the application should be running on [http://localhost:3000/](http://localhost:3000/) and the output should look something like this:
 
-![Todo List Output](https://github.com/isaiahnixon/todo-list/blob/master/public/Todo-List.JPG?raw=true)
+![Todo List Output](/blob/master/public/Todo-List.JPG?raw=true)
 
 ### Resources
 
