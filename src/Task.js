@@ -1,10 +1,37 @@
+import React, { Component } from 'react';
+import { Draggable } from 'react-beautiful-dnd';
+import './Task.css';
+
+const grid = 8;
+
+/**
+ * Renders the appropriate styling for the Task.
+ * @param draggableStyle
+ * @param isDragging
+ * @param borderColor
+ */
+const getItemStyle = (draggableStyle, isDragging, borderColor) => ({
+  // Outline the basic form, using the grid constant.
+  userSelect: 'none',
+  padding: grid * 2,
+  margin: `0 0 ${grid}px 0`,
+  border: '0.5em solid',
+  borderRadius: '4em',
+
+  // Change the borderColor based upon the input parameter.
+  borderColor,
+
+  // change background colour if dragging
+  background: isDragging ? 'lightblue' : 'grey',
+  color: isDragging ? 'black' : 'white',
+
+  // styles we need to apply on draggables
+  ...draggableStyle
+});
+
 /**
  * This class renders a task and stores its local state variables.
  */
-
-import React, { Component } from 'react';
-import './Task.css';
-
 class Task extends Component {
   /**
    * This function is called upon instantiation of the class.
@@ -44,22 +71,35 @@ class Task extends Component {
    * The markup for React to process into the front-end display.
    */
   render() {
-    // Gather the current borderColor.
-    const borderColor = this.state.borderColor;
     return (
-      <div>
-        {/* Call updateProgress() when the Task is clicked. */}
-        <div
-          onClick={this.updateProgress}
-          style={{ borderColor: borderColor }}
-          className="Task"
-        >
-          {/* Render the current progress and description. */}
-          <div className={'task_description'}>
-            <strong>{this.state.progress}:</strong> {this.props.description}
+      <Draggable
+        key={this.props.description}
+        draggableId={this.props.description}
+      >
+        {(provided, snapshot) => (
+          // Call updateProgress() when the Task is clicked.
+          <div onClick={this.updateProgress}>
+            <div
+              ref={provided.innerRef}
+              style={getItemStyle(
+                provided.draggableStyle,
+                snapshot.isDragging,
+                this.state.borderColor
+              )}
+              {...provided.dragHandleProps}
+            >
+              <div>
+                {/* Render the current progress and description. */}
+                <div className="task_description">
+                  <strong>{this.state.progress}:</strong>{' '}
+                  {this.props.description}
+                </div>
+              </div>
+            </div>
+            {provided.placeholder}
           </div>
-        </div>
-      </div>
+        )}
+      </Draggable>
     );
   }
 }

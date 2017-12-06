@@ -1,5 +1,3 @@
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
 # Todo List
 
 ## Purpose
@@ -39,7 +37,7 @@ yarn start
 
 Now the application should be running on [http://localhost:3000/](http://localhost:3000/) and the output should look something like this:
 
-![Todo List Output](https://github.com/isaiahnixon/todo-list/blob/master/public/Todo-List.JPG?raw=true)
+![Todo List Output](https://github.com/isaiahnixon/todo-list/blob/master/public/todo-list-output.gif?raw=true)
 
 ### Resources
 
@@ -65,6 +63,12 @@ npm test
 ## Deployment
 
 I refer to the [Deployment](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment) section of the create-react-app documentation.
+
+
+## Built With
+
+* [Create React App](https://github.com/facebookincubator/create-react-app) -- Used to initialize React.js
+* [React Beautiful DnD](https://github.com/atlassian/react-beautiful-dnd) - Used for the drag and drop functionality
 
 ## Contributing
 

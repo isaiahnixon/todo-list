@@ -1,12 +1,30 @@
-/**
- * This class pieces together the application and stores the array of the tasks.
- */
-
 import React, { Component } from 'react';
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import './TaskList.css';
 import AddTask from './AddTask';
 import Task from './Task';
 
+/**
+ * A reorder function to support drag and drop functionality.
+ * @param list
+ * @param startIndex
+ * @param endIndex
+ * @returns {Array}
+ */
+const reorder = (list, startIndex, endIndex) => {
+  const result = Array.from(list);
+  const [removed] = result.splice(startIndex, 1);
+  result.splice(endIndex, 0, removed);
+  return result;
+};
+
+// using some little inline style helpers to make the app look okay
+const grid = 8;
+const getListStyle = { padding: grid };
+
+/**
+ * This class pieces together the application and stores the array of the tasks.
+ */
 class TaskList extends Component {
   /**
    * This function is called upon instantiation of the class.
@@ -19,15 +37,17 @@ class TaskList extends Component {
     // Define the default state.
     this.state = {
       header: 'Todo List',
-      tasks: ['Write the tests for this application'],
+      tasks: ['Write the tests for this application', 'Add Drag and Drop'],
       message:
         'Click on a task to progress it through the workflow:\n' +
         'Not started -> In progress -> Completed\n' +
         'Click again to delete the task\n'
     };
-    // Bind "this" calls in addTask() and removeTask() to this instantiation of the class.
+    // Bind "this" calls in addTask() and removeTask() and onDragEnd()
+    // to this instantiation of the class.
     this.addTask = this.addTask.bind(this);
     this.removeTask = this.removeTask.bind(this);
+    this.onDragEnd = this.onDragEnd.bind(this);
   }
 
   /**
@@ -55,6 +75,30 @@ class TaskList extends Component {
   }
 
   /**
+   * Processes what to do when an item is dropped.
+   * @param result
+   */
+  onDragEnd(result) {
+    // Test if the item was dropped outside the list.
+    if (!result.destination) {
+      // Do not change its position, and end the function.
+      return;
+    }
+
+    // Reorder the list based upon the position of the item.
+    const tasks = reorder(
+      this.state.tasks,
+      result.source.index,
+      result.destination.index
+    );
+
+    // Reset the list of Tasks.
+    this.setState({
+      tasks
+    });
+  }
+
+  /**
    * Removes a Task from the TaskList.
    *
    * @param removeDescription
@@ -62,9 +106,9 @@ class TaskList extends Component {
    */
   removeTask(removeDescription) {
     // An array of all Tasks where their description is not removeDescription.
-    const filteredTasks = this.state.tasks.filter(description => {
-      return description !== removeDescription;
-    });
+    const filteredTasks = this.state.tasks.filter(
+      description => description !== removeDescription
+    );
 
     // Reset the TaskList with the filteredTasks.
     this.setState({ tasks: filteredTasks });
@@ -92,17 +136,26 @@ class TaskList extends Component {
     return (
       <div className="TaskList">
         {/* Render the current header. */}
-        <div className={'task_list_header'}>
+        <div className="task_list_header">
           <h1>{this.state.header}</h1>
         </div>
         {/* Instantiate an AddTask, passing it the addTask function from this class. */}
         <AddTask addTask={this.addTask} />
         {/* Render the current user message. */}
-        <div className={'task_list_message'}>
+        <div className="task_list_message">
           <h3>{this.state.message}</h3>
         </div>
-        {/* Call the renderTasks() function. */}
-        {this.renderTasks()}
+        {/* Render the drag and drop list of Tasks */}
+        <DragDropContext onDragEnd={this.onDragEnd}>
+          <Droppable droppableId="droppable">
+            {(provided, snapshot) => (
+              <div ref={provided.innerRef} style={getListStyle}>
+                {this.renderTasks()}
+                {provided.placeholder}
+              </div>
+            )}
+          </Droppable>
+        </DragDropContext>
       </div>
     );
   }

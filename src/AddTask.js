@@ -1,10 +1,9 @@
-/**
- * This class renders the AddTask block that handles user input to render more Tasks.
- */
-
 import React, { Component } from 'react';
 import './AddTask.css';
 
+/**
+ * This class renders the AddTask block that handles user input to render more Tasks.
+ */
 class AddTask extends Component {
   /**
    * This function is called upon instantiation of the class.
@@ -49,19 +48,19 @@ class AddTask extends Component {
    */
   render() {
     return (
-      <div className={'AddTask'}>
+      <div className="AddTask">
         {/* Render the header. */}
         <h3>{this.state.header}:</h3>
         {/* Render a text input for the user to manipulate the description. */}
         <input
-          className={'task_text_input'}
+          className="task_text_input"
           type="text"
           onChange={this.handleUpdate}
           value={this.state.description}
         />
         <br />
         {/* Render a button that calls addTask(). */}
-        <button className={'add_task_button'} onClick={this.addTask}>
+        <button className="add_task_button" onClick={this.addTask}>
           {this.state.button}
         </button>
       </div>
