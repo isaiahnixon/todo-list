@@ -10,12 +10,12 @@ These instructions will get you a copy of the project up and running on your mac
 
 ### Prerequisites
 
-* [node.js](https://nodejs.org/en/)
-* [git](https://git-scm.com/)
+* **[Node.js](https://nodejs.org/en/)**
+* **[Git](https://git-scm.com/)**
 
 #### Windows
 
-* [Git for Windows](https://git-for-windows.github.io/)
+* **[Git for Windows](https://git-for-windows.github.io/)**
 
 ### Installation
 
@@ -47,11 +47,11 @@ Now the application should be running on [http://localhost:3000/](http://localho
 
 #### Brandon Richey
 
-* [Hello World Tutorial](https://github.com/richeyb/hello-world-tutorial-example) (Source code for the below tutorials)
-* [Learning React With Create-React-App (Part 1)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc) (An introduction to create-react-app, React Components, and JSX)
-* [Learning React With Create-React-App (Part 2)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-2-3ad99f38b48d) (An introduction to properties, state, and interactivity)
-* [Learning React With Create-React-App (Part 3)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-3-322447d14192) (An introduction to functions and inheritance)
-* [Learning React With Create-React-App (Part 4)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-4-9f843c8c1ccc) (An introduction to testing)
+* **[Hello World Tutorial](https://github.com/richeyb/hello-world-tutorial-example)** - *Source code for the below tutorials*
+* **[Learning React With Create-React-App (Part 1)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-1-a12e1833fdc)** - *An introduction to create-react-app, React Components, and JSX*
+* **Learning React With Create-React-App (Part 2)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-2-3ad99f38b48d)** - *An introduction to properties, state, and interactivity*
+* **[Learning React With Create-React-App (Part 3)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-3-322447d14192)** - *An introduction to functions and inheritance*
+* **[Learning React With Create-React-App (Part 4)](https://medium.com/in-the-weeds/learning-react-with-create-react-app-part-4-9f843c8c1ccc)** - *An introduction to testing*
 
 ## Running the tests
 
@@ -68,8 +68,8 @@ I refer to the [Deployment](https://github.com/facebookincubator/create-react-ap
 
 ## Built With
 
-* [Create React App](https://github.com/facebookincubator/create-react-app) -- Used to initialize React.js
-* [React Beautiful DnD](https://github.com/atlassian/react-beautiful-dnd) - Used for the drag and drop functionality
+* **[Create React App](https://github.com/facebookincubator/create-react-app)** - *Bootstrap the application*
+* **[React Beautiful DnD](https://github.com/atlassian/react-beautiful-dnd)** - *Drag and drop functionality*
 
 ## Contributing
 
