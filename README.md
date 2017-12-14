@@ -42,8 +42,8 @@ Now the application should be running on [http://localhost:3000/](http://localho
 
 ### Resources
 
-* [React.js Documentation](https://reactjs.org/docs/hello-world.html)
-* [Create-React-App User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)
+* **[React.js Documentation](https://reactjs.org/docs/hello-world.html)**
+* **[Create-React-App User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)**
 
 #### Brandon Richey
 
