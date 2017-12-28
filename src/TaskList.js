@@ -18,7 +18,7 @@ const reorder = (list, startIndex, endIndex) => {
   return result;
 };
 
-// using some little inline style helpers to make the app look okay
+// Define the grid and render the padding based upon it.
 const grid = 8;
 const getListStyle = { padding: grid };
 
@@ -37,7 +37,10 @@ class TaskList extends Component {
     // Define the default state.
     this.state = {
       header: 'Todo List',
-      tasks: ['Write the tests for this application', 'Add Drag and Drop'],
+      tasks: [
+        'Write the tests for this application',
+        'Add an exportable archive of completed tasks'
+      ],
       message:
         'Click on a task to progress it through the workflow:\n' +
         'Not started -> In progress -> Completed\n' +

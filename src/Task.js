@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
 import { Draggable } from 'react-beautiful-dnd';
-import './Task.css';
 
 const grid = 8;
 
 /**
  * Renders the appropriate styling for the Task.
+ 
  * @param draggableStyle
  * @param isDragging
  * @param borderColor
  */
-const getItemStyle = (draggableStyle, isDragging, borderColor) => ({
-  // Outline the basic form, using the grid constant.
+const getTaskStyle = (draggableStyle, isDragging, borderColor) => ({
+  // Outline the form of the Task, using the grid constant.
   userSelect: 'none',
   padding: grid * 2,
   margin: `0 0 ${grid}px 0`,
-  border: '0.5em solid',
-  borderRadius: '4em',
+  border: '0.25em ridge',
+  borderRadius: '1em',
+  textAlign: 'left',
 
   // Change the borderColor based upon the input parameter.
   borderColor,
 
-  // change background colour if dragging
-  background: isDragging ? 'lightblue' : 'grey',
+  // Change background color and text color if dragging.
+  background: isDragging ? 'lightblue' : 'black',
   color: isDragging ? 'black' : 'white',
 
-  // styles we need to apply on draggables
+  // Apply inherited style.
   ...draggableStyle
 });
 
@@ -44,7 +45,7 @@ class Task extends Component {
     // Define the default state.
     this.state = {
       progress: 'Not started',
-      borderColor: 'darkred'
+      borderColor: 'red'
     };
     // Bind "this" calls in updateProgress() to this instantiation of the class.
     this.updateProgress = this.updateProgress.bind(this);
@@ -56,10 +57,10 @@ class Task extends Component {
   updateProgress() {
     if (this.state.progress === 'Not started') {
       this.setState({ progress: 'In progress' });
-      this.setState({ borderColor: 'gold' });
+      this.setState({ borderColor: 'yellow' });
     } else if (this.state.progress === 'In progress') {
       this.setState({ progress: 'Completed' });
-      this.setState({ borderColor: 'darkgreen' });
+      this.setState({ borderColor: 'green' });
     } else if (this.state.progress === 'Completed') {
       // This is a call to removeTask(), which is a property defined when the class is instantiated.
       this.props.removeTask(this.props.description);
@@ -81,7 +82,7 @@ class Task extends Component {
           <div onClick={this.updateProgress}>
             <div
               ref={provided.innerRef}
-              style={getItemStyle(
+              style={getTaskStyle(
                 provided.draggableStyle,
                 snapshot.isDragging,
                 this.state.borderColor
@@ -90,10 +91,7 @@ class Task extends Component {
             >
               <div>
                 {/* Render the current progress and description. */}
-                <div className="task_description">
-                  <strong>{this.state.progress}:</strong>{' '}
-                  {this.props.description}
-                </div>
+                <strong>{this.state.progress}:</strong> {this.props.description}
               </div>
             </div>
             {provided.placeholder}

@@ -1,8 +1,8 @@
 button {
-  background: darkgreen;
+  background: green;
   margin: 1em;
   padding: 0.5em;
-  border: 0.33em ridge darkgrey;
+  border: 0.25em ridge darkgrey;
   border-radius: 1em;
   width: 10em;
   color: white;
@@ -19,6 +19,6 @@ div {
 .task_list_header {
   margin: 1em;
   padding: 0.5em;
-  border: 0.5em solid darkgreen;
-  border-radius: 4em;
+  border: 0.25em ridge green;
+  border-radius: 1em;
 }
