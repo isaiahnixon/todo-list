@@ -36,7 +36,7 @@ class TaskList extends Component {
     super(props);
     // Define the default state.
     this.state = {
-      header: 'Todo List',
+      header: 'To-do List',
       tasks: [
         'Write the tests for this application',
         'Add an exportable archive of completed tasks'

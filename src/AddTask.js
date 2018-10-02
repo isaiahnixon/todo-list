@@ -50,7 +50,7 @@ class AddTask extends Component {
     return (
       <div className="AddTask">
         {/* Render the header. */}
-        <h3>{this.state.header}:</h3>
+        <h2>{this.state.header}:</h2>
         {/* Render a text input for the user to manipulate the description. */}
         <input
           className="task_text_input"

@@ -5,7 +5,7 @@ const grid = 8;
 
 /**
  * Renders the appropriate styling for the Task.
- 
+
  * @param draggableStyle
  * @param isDragging
  * @param borderColor
@@ -15,7 +15,7 @@ const getTaskStyle = (draggableStyle, isDragging, borderColor) => ({
   userSelect: 'none',
   padding: grid * 2,
   margin: `0 0 ${grid}px 0`,
-  border: '0.25em ridge',
+  border: '0.25em solid',
   borderRadius: '1em',
   textAlign: 'left',
 
@@ -23,8 +23,8 @@ const getTaskStyle = (draggableStyle, isDragging, borderColor) => ({
   borderColor,
 
   // Change background color and text color if dragging.
-  background: isDragging ? 'lightblue' : 'black',
-  color: isDragging ? 'black' : 'white',
+  background: isDragging ? borderColor : '#4b3832',
+  color: isDragging ? '#4b3832' : borderColor,
 
   // Apply inherited style.
   ...draggableStyle
@@ -45,7 +45,7 @@ class Task extends Component {
     // Define the default state.
     this.state = {
       progress: 'Not started',
-      borderColor: 'red'
+      borderColor: '#ffe7c8'
     };
     // Bind "this" calls in updateProgress() to this instantiation of the class.
     this.updateProgress = this.updateProgress.bind(this);
@@ -57,10 +57,10 @@ class Task extends Component {
   updateProgress() {
     if (this.state.progress === 'Not started') {
       this.setState({ progress: 'In progress' });
-      this.setState({ borderColor: 'yellow' });
+      this.setState({ borderColor: '#e8caff' });
     } else if (this.state.progress === 'In progress') {
       this.setState({ progress: 'Completed' });
-      this.setState({ borderColor: 'green' });
+      this.setState({ borderColor: '#d7fdec' });
     } else if (this.state.progress === 'Completed') {
       // This is a call to removeTask(), which is a property defined when the class is instantiated.
       this.props.removeTask(this.props.description);
