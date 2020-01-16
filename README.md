@@ -32,7 +32,7 @@ npm install
 ```
 
 ```
-yarn start
+npm start
 ```
 
 Now the application should be running on [http://localhost:3000/](http://localhost:3000/) and the output should look something like this:
@@ -43,7 +43,7 @@ Now the application should be running on [http://localhost:3000/](http://localho
 ### Resources
 
 * **[React.js Documentation](https://reactjs.org/docs/hello-world.html)**
-* **[Create-React-App User Guide](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md)**
+* **[Create-React-App User Guide](https://github.com/facebook/create-react-app/blob/master/packages/cra-template/template/README.md)**
 
 #### Brandon Richey
 
@@ -63,7 +63,7 @@ npm test
 
 ## Deployment
 
-I refer to the [Deployment](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#deployment) section of the create-react-app documentation.
+I refer to the [Deployment](https://create-react-app.dev/docs/deployment/) section of the create-react-app documentation.
 
 
 ## Built With
